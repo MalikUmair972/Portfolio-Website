@@ -1,0 +1,38 @@
+
+.arrow-button:hover > .arrow {
+    transform: rotate(-45deg) translate(4px, 4px);
+    border-color: white; /* To change on hover */
+}
+
+.arrow-button:hover > .arrow::before {
+    opacity: 1;
+    width: 12px;
+}
+
+.arrow::before {
+    content: '';
+    display: block;
+    background-color: currentColor;
+    width: 4px;
+    transform-origin: bottom right;
+    height: 2px;
+    position: absolute;
+    opacity: 0;
+    bottom: calc(-2px / 2);
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+    right: 0;
+}
+
+.relative {
+    position: relative;
+  }
+  
+  .absolute {
+    position: absolute;
+  }
+  
+  .transition-transform {
+    transition: transform 0.7s ease;
+  }
+  
