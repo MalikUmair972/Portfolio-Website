@@ -1,12 +1,13 @@
 import { Component, HostListener, ElementRef, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AppComponent } from "../app.component";
+import { PortfolioComponent } from "../portfolio/portfolio.component";
+import {ContactComponent} from '../contact/contact.component'
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule,
-
-  ],
+  imports: [CommonModule, AppComponent, PortfolioComponent,ContactComponent],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'
   
