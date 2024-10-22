@@ -1,0 +1,18 @@
+.scrollable-area {
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #4f46e5 #e5e7eb; /* thumb color and track color */
+}
+
+/* For WebKit browsers */
+.scrollable-area::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.scrollable-area::-webkit-scrollbar-track {
+    background: #e5e7eb; /* Track color */
+}
+
+.scrollable-area::-webkit-scrollbar-thumb {
+    background-color: #4f46e5; /* Thumb color */
+    border-radius: 10px; /* Round corners of the thumb */
+}
