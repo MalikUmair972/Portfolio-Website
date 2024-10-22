@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet,RouterLink } from '@angular/router';
 import { AboutComponent } from './about/about.component'
 import { ContactComponent } from './contact/contact.component'
 import { PortfolioComponent } from './portfolio/portfolio.component'
+import { CommonModule } from '@angular/common';
 
 
 
@@ -12,7 +13,9 @@ import { PortfolioComponent } from './portfolio/portfolio.component'
   imports: [RouterOutlet,
     AboutComponent,
     ContactComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    RouterLink,
+    CommonModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
@@ -20,4 +23,5 @@ import { PortfolioComponent } from './portfolio/portfolio.component'
 })
 export class AppComponent {
   title = 'portfolio-website';
+  
 }

@@ -1,4 +1,4 @@
-<div class="about">
+<div class="about ">
     <div class="relative container-content">
         <div class="relative w-full h-screen">
             <img class="w-full h-full absolute object-cover"
@@ -9,14 +9,14 @@
             </div>
             <div class="absolute bottom-[150px] w-12 sm:w-96 sm:bottom-1/4 ">
                 <h1
-                    class="text-xl sm:text-4xl text-white font-bold bottom-96 sm:bottom-1/2 pl-6 sm:pl-8 sm:text-left w-40 sm:w-auto z-10">
+                    class="text-xl sm:text-4xl text-white font-bold bottom-96 sm:bottom-1/2 pl-6 sm:pl-8 sm:text-left w-40 sm:w-auto z-10 fade-in-slide">
                     Hello, I'M<br>
                     <span style="
           background: linear-gradient(149deg, rgba(255,246,254,1) 0%, rgba(222,26,221,1) 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;"> Malik Umair</span> <br>Front-End Developer
                 </h1>
-                <p class=" sm:text-xl text-white bottom-1/4 p-6 sm:p-8 sm:text-left w-56 sm:w-auto">Transforming ideas
+                <p class=" sm:text-xl text-white bottom-1/4 p-6 sm:p-8 sm:text-left w-56 sm:w-auto fade-in-slide delay-1000">Transforming ideas
                     into interactive, responsive designs.<br>
                     Empowering user experiences through the magic <br> of front-end development.</p>
             </div>
@@ -28,14 +28,14 @@
                 <span
                     class="arrow w-1.5 h-1.5 border-r-2 border-b-2 rotate-[-45deg] ml-1.5 transition-all duration-300 ease-in-out relative"></span>
             </button>
-            <button
+            <button (click)="downloadCV()"
                 class="arrow-button sm:w-44 sm:h-12 w-32 h-10 flex items-center justify-center text-white bg-purple-600 rounded-full transition-all duration-300 ease-in-out font-semibold cursor-pointer  hover:bg-purple-400 hover:text-white">
                 Donwload CV
                 <span
                     class="arrow w-1.5 h-1.5 border-r-2 border-b-2 rotate-[-45deg] ml-1.5 transition-all duration-300 ease-in-out relative"></span>
             </button>
         </div>
-        <div class="absolute bg-purple-300 sm:w-56 h-auto sm:h-72 w-34 right-0 top-1/4 rounded-xl p-4">
+        <div class="absolute bg-purple-300 sm:w-56 h-auto sm:h-72 w-34 right-0 top-1/4 rounded-xl p-4 fade-in-slide">
             <div class="experience">
                 <h1 class="text-4xl font-bold text-purple-800">+02</h1>
                 <p class="font-semibold text-purple-900">Years Of Experience</p>
@@ -63,26 +63,26 @@
                 engagement."
             </p>
         </div>
-        <div class="services relative p-4 flex flex-col justify-center items-center overflow-hidden w-full h-full">
+        <div class="services relative p-4 flex flex-col justify-center items-center overflow-hidden w-full h-full text-nowrap">
             <div class="mobile ">
                 <h1 id="h1-right" class="absolute top-1/4 left-2 font-bold z-[-1] text-white text-2xl sm:text-8xl">
                     Mobile Application Design</h1>
                 <img class="h-1/3 " src="https://i.pinimg.com/originals/f5/3f/95/f53f957959ae6175ef980a14c5a48b4b.png"
                     alt="">
                 <h1 id="h1-left"
-                    class="absolute top-1/4 right-2 sm:right-[142px] font-bold text-transparent text-2xl sm:text-8xl"
+                    class="absolute top-1/4 right-2 sm:right-[142px] font-bold text-transparent text-2xl sm:text-8xl text-nowrap"
                     style="text-stroke: 2px white; -webkit-text-stroke: 2px rgb(255, 255, 255);">
                     Mobile Application Design
                 </h1>
             </div>
             <div class="website flex flex-col justify-center items-center pt-12">
                 <h1 id="h2-right"
-                    class="absolute bottom-0-1 left-4 sm:left-[248px] font-bold z-[-1] text-white text-2xl sm:text-8xl">
+                    class="absolute bottom-0-1 left-4 sm:left-[248px] font-bold z-[-1] text-white text-2xl sm:text-8xl text-nowrap">
                     Website Makeup Design</h1>
                 <img class="h-1/3 w-[930px]"
                     src="https://i.pinimg.com/736x/c3/4b/bc/c34bbc38324eab42734bbdc46e0aebb2.jpg" alt="">
                 <h1 id="h2-left"
-                    class="absolute bottom-0-1 right-2 sm:right-[10px] font-bold text-transparent text-2xl sm:text-8xl"
+                    class="absolute bottom-0-1 right-2 sm:right-[10px] font-bold text-transparent text-2xl sm:text-8xl text-nowrap"
                     style="text-stroke: 2px white; -webkit-text-stroke: 2px rgb(255, 255, 255);">
                     Website Makeup Design
                 </h1>

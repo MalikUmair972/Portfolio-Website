@@ -35,4 +35,34 @@
   .transition-transform {
     transition: transform 0.7s ease;
   }
+
+  @keyframes fadeInSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-slide {
+    animation: fadeInSlide 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeslide {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+  .fade-slide {
+    animation: fadeslide 0.8s ease-in-out forwards;
+  }
+
   

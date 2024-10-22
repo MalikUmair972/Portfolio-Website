@@ -40,6 +40,13 @@ export class AboutComponent {
       h2Right.style.transform = `translateX(-${scrollPosition / 14}px)`; // Slow the movement
     }
   }
+
+  downloadCV() {
+    const link = document.createElement('a');
+    link.href = 'assets/Images/CV.pdf'
+    link.download = 'Cv.download'
+    link.click();
+  } 
   
 }
 
