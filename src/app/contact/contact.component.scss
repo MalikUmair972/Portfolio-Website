@@ -1,7 +1,6 @@
 .arrow-button:hover>.arrow {
     transform: rotate(-45deg) translate(4px, 4px);
     border-color: white;
-    /* To change on hover */
 }
 
 .arrow-button:hover>.arrow::before {
