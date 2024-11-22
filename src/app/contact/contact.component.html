@@ -1,7 +1,6 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <div class="contact bg-purple-600 pt-12 overflow-hidden">
     <div class="container flex flex-col lg:flex-row">
-        <div class="content w-full lg:w-[50%] p-4 pt-14">
+        <div class="content w-full lg:w-[50%] pl-8 p-4 pt-14">
             <h1 class="text-white text-4xl font-bold">Let’s Talk For your <span style="
                 background: linear-gradient(149deg, rgba(255,246,254,1) 0%, rgba(222,26,221,1) 100%);
                 -webkit-background-clip: text;
@@ -57,48 +56,48 @@
                 </a>
             </div>
         </div>
-        <div class="form w-full lg:w-[90%] bg-purple-900 mt-12 p-3 pl-8 lg:pl-32 gap-24 rounded-lg shadow-xl">
+        <form [formGroup]="contactForm" (ngSubmit)="contactUser()" class="form w-full lg:w-[90%] bg-purple-900 mt-12 p-3 pl-8 lg:pl-32 gap-24 rounded-lg shadow-xl">
             <h1 class="text-purple-300 text-4xl font-bold pl-8 lg:pl-44 pt-12 mb-12">Contact Me</h1>
             <div class="flex flex-col lg:flex-row gap-6">
                 <!-- Full Name Input -->
                 <div class="flex flex-col relative group">
                     <label class="text-white text-xl font-bold p-3 transition-all group-focus-within:text-purple-400">Full Name</label>
-                    <input class="w-full h-12 border-none pl-12 pr-4 outline-none transition-all focus:ring-2 focus:ring-purple-500 rounded-xl" type="text" placeholder="Enter Name" aria-label="Full Name">
+                    <input class="w-full h-12 border-none pl-12 pr-4 outline-none transition-all focus:ring-2 focus:ring-purple-500 rounded-xl" type="text" required placeholder="Enter Name" aria-label="Full Name" formControlName="name">
                     <!-- Icon -->
-                    <i class="fa fa-user absolute left-3 top-[56px] p-1 text-purple-500 text-2xl border-2 border-transparent group-hover:scale-110 transition-all"></i>
+                    <i class="fa fa-user absolute left-3 top-[56px] pt-[1px] text-purple-500 text-2xl border-2 border-transparent group-hover:scale-110 transition-all"></i>
                 </div>
 
                 <!-- Email Address Input -->
                 <div class="flex flex-col relative group">
                     <label class="text-white text-xl font-bold p-3 transition-all group-focus-within:text-purple-400">Email Address</label>
-                    <input class="w-full h-12 border-none pl-12 pr-4 outline-none transition-all focus:ring-2 focus:ring-purple-500 rounded-xl" type="email" placeholder="Enter Email" aria-label="Email Address">
+                    <input class="w-full h-12 border-none pl-12 pr-4 outline-none transition-all focus:ring-2 focus:ring-purple-500 rounded-xl" type="email" placeholder="Enter Email" aria-label="Email Address" formControlName="email">
                     <!-- Icon -->
-                    <i class="fa fa-envelope absolute left-3 top-[56px] p-1 text-purple-500 text-2xl border-2 border-transparent group-hover:scale-110 transition-all"></i>
+                    <i class="fa fa-envelope absolute left-3 top-[56px] pt-[1px] text-purple-500 text-2xl border-2 border-transparent group-hover:scale-110 transition-all"></i>
                 </div>
             </div>
-
+    
             <div class="flex flex-col lg:flex-row gap-6 mt-6">
                 <!-- Phone Number Input -->
                 <div class="flex flex-col relative group">
                     <label class="text-white text-xl font-bold p-3 transition-all group-focus-within:text-purple-400">Phone Number</label>
-                    <input class="w-full h-12 border-none pl-12 pr-4 outline-none transition-all focus:ring-2 focus:ring-purple-500 rounded-xl" type="text" placeholder="Enter Number" aria-label="Phone Number">
+                    <input class="w-full h-12 border-none pl-12 pr-4 outline-none transition-all focus:ring-2 focus:ring-purple-500 rounded-xl" type="text" placeholder="Enter Number" aria-label="Phone Number" formControlName="number">
                     <!-- Icon -->
-                    <i class="fa fa-phone absolute left-3 top-[56px] p-1 text-purple-500 text-2xl border-2 border-transparent group-hover:scale-110 transition-all"></i>
+                    <i class="fa fa-phone absolute left-3 top-[56px]  pt-[1px] text-purple-500 text-2xl border-2 border-transparent group-hover:scale-110 transition-all"></i>
                 </div>
 
                 <!-- Subject Input -->
                 <div class="flex flex-col relative group">
                     <label class="text-white text-xl font-bold p-3 transition-all group-focus-within:text-purple-400">Subject</label>
-                    <input class="w-full h-12 border-none pl-12 pr-4 outline-none transition-all focus:ring-2 focus:ring-purple-500 rounded-xl" type="text" placeholder="Enter Subject" aria-label="Subject">
+                    <input class="w-full h-12 border-none pl-12 pr-4 outline-none transition-all focus:ring-2 focus:ring-purple-500 rounded-xl" type="text" placeholder="Enter Subject" aria-label="Subject" formControlName="subject">
                     <!-- Icon -->
-                    <i class="fa fa-tag absolute left-3 top-[56px] p-1 text-purple-500 text-2xl border-2 border-transparent group-hover:scale-110 transition-all"></i>
+                    <i class="fa fa-tag absolute left-3 top-[56px]  pt-[1px] text-purple-500 text-2xl border-2 border-transparent group-hover:scale-110 transition-all"></i>
                 </div>
             </div>
 
             <!-- Message Textarea -->
             <div class="flex flex-col relative mt-6 group">
                 <label class="text-white text-xl font-bold p-3 transition-all group-focus-within:text-purple-400">Message</label>
-                <textarea class="w-full h-44 border-none outline-none lg:w-3/4 transition-all focus:ring-2 focus:ring-purple-500 rounded-xl p-12" placeholder="Enter Message" aria-label="Message"></textarea>
+                <textarea class="w-full h-44 border-none outline-none lg:w-3/4 transition-all focus:ring-2 focus:ring-purple-500 rounded-xl p-4" placeholder="Enter Message" aria-label="Message" formControlName="message"></textarea>
             </div>
 
             <!-- Submit Button -->
@@ -106,6 +105,6 @@
                 Submit
                 <span class="arrow w-1.5 h-1.5 border-r-2 border-b-2 border-white rotate-45 ml-2 transition-all duration-300 ease-in-out"></span>
             </button>
-        </div>
+        </form>
     </div>
 </div>
