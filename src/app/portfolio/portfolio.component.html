@@ -98,57 +98,13 @@
         set you apart in today's competitive landscape. By exploring diverse experiences, you can unlock new
         opportunities and elevate your expertise to new heights</p>
     <div class="skills p-4 ml-0 md:ml-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-8 gap-x-0">
-        <div
-            class="tailwind bg-black flex flex-col justify-center border-none items-center w-full md:w-56 h-72 rounded-xl p-4 transition duration-500 hover:bg-purple-900 hover:-translate-y-4 hover:shadow-white group">
+        <div *ngFor="let skill of skills"
+            class="bg-black flex flex-col justify-center border-none items-center w-full md:w-56 h-72 rounded-xl p-4 transition duration-500 hover:bg-purple-900 hover:-translate-y-4 hover:shadow-white group">
             <img class="w-32 h-32 rounded-full"
-                src="https://www.citypng.com/public/uploads/preview/js-javascript-round-logo-icon-png-7017516947717339mnyf7eumy.png"
+                [src]="skill.Image"
                 alt="">
-            <p class="text-white pt-2 text-xl font-bold">Javascript</p>
+            <p class="text-white pt-2 text-xl font-bold">{{skill.name}}</p>
             <span
-                class="text-white bg-gray-800 w-32 h-12 text-lg text-center font-bold pt-2 mt-8 rounded-xl transition duration-300 group-hover:bg-white group-hover:text-black">75%</span>
-        </div>
-
-        <div
-            class="tailwind bg-black flex flex-col justify-center border-none items-center w-full md:w-56 h-72 rounded-xl p-4 transition duration-500 hover:bg-purple-900 hover:-translate-y-4 hover:shadow-white group">
-            <img class="w-32 h-32 rounded-full"
-                src="https://cdn2.iconfinder.com/data/icons/designer-skills/128/angular-512.png" alt="">
-            <p class="text-white pt-2 text-xl font-bold">Angular Js</p>
-            <span
-                class="text-white bg-gray-800 w-32 h-12 text-lg text-center font-bold pt-2 mt-8 rounded-xl transition duration-300 group-hover:bg-white group-hover:text-black">65%</span>
-        </div>
-
-        <div
-            class="tailwind bg-black flex flex-col justify-center border-none items-center w-full md:w-56 h-72 rounded-xl p-4 transition duration-500 hover:bg-purple-900 hover:-translate-y-4 hover:shadow-white group">
-            <img class="w-32 h-32 rounded-full"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSDKn3vA2YUbXzN0ZC3gALWJ08gJN-Drl15w&s"
-                alt="">
-            <p class="text-white pt-2 text-xl font-bold">Tailwind CSS</p>
-            <span
-                class="text-white bg-gray-800 w-32 h-12 text-lg text-center font-bold pt-2 mt-8 rounded-xl transition duration-300 group-hover:bg-white group-hover:text-black">98%</span>
-        </div>
-
-        <div
-            class="tailwind bg-black flex flex-col justify-center border-none items-center w-full md:w-56 h-72 rounded-xl p-4 transition duration-500 hover:bg-purple-900 hover:-translate-y-4 hover:shadow-white group">
-            <img class="w-32 h-32 rounded-full"
-                src="https://cdn.icon-icons.com/icons2/2699/PNG/512/webflow_logo_icon_169218.png" alt="">
-            <p class="text-white pt-2 text-xl font-bold">Webflow</p>
-            <span
-                class="text-white bg-gray-800 w-32 h-12 text-lg text-center font-bold pt-2 mt-8 rounded-xl transition duration-300 group-hover:bg-white group-hover:text-black">85%</span>
-        </div>
-
-        <div
-            class="tailwind bg-black flex flex-col justify-center border-none items-center w-full md:w-56 h-72 rounded-xl p-4 transition duration-500 hover:bg-purple-900 hover:-translate-y-4 hover:shadow-white group">
-            <img class="w-32 h-32 rounded-full" src="https://cdn-icons-png.flaticon.com/512/5436/5436972.png" alt="">
-            <p class="text-white pt-2 text-xl font-bold">Adobe Photoshop</p>
-            <span
-                class="text-white bg-gray-800 w-32 h-12 text-lg text-center font-bold pt-2 mt-8 rounded-xl transition duration-300 group-hover:bg-white group-hover:text-black">97%</span>
-        </div>
-
-        <div
-            class="tailwind bg-black flex flex-col justify-center border-none items-center w-full md:w-56 h-72 rounded-xl p-4 transition duration-500 hover:bg-purple-900 hover:-translate-y-4 hover:shadow-white group">
-            <img class="w-32 h-32 rounded-full" src="https://cdn-icons-png.flaticon.com/512/919/919832.png" alt="">
-            <p class="text-white pt-2 text-xl font-bold">Typescript</p>
-            <span
-                class="text-white bg-gray-800 w-32 h-12 text-lg text-center font-bold pt-2 mt-8 rounded-xl transition duration-300 group-hover:bg-white group-hover:text-black">88%</span>
+                class="text-white bg-gray-800 w-32 h-12 text-lg text-center font-bold pt-2 mt-8 rounded-xl transition duration-300 group-hover:bg-white group-hover:text-black">{{skill.Percent}}</span>
         </div>
     </div>
