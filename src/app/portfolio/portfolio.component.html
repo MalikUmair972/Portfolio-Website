@@ -1,110 +1,65 @@
 <div class="portfolio bg-purple-600 pt-12 overflow-hidden">
-    <div class="container flex flex-col md:flex-row">
-        <div class="web flex flex-col md:flex-row p-4 ">
-            <div class=" relative group pl-0 md:pl-4 mt-4 md:mt-0 ">
-                <img class="w-full h-full object-cover " src="assets/Images/Capture.JPG" alt="">
-                <div
-                    class="overlay w-[98.2%] h-full ml-4 bg-black opacity-0 group-hover:opacity-80 absolute top-0 left-0 flex justify-center items-center transition-opacity duration-300">
-                    <div class="curved-line absolute top-0 left-0 w-full h-full pointer-events-none">
-                        <svg width="100%" height="100%">
-                            <path class="curve" d="M 0 300 Q 400 0 800 100 Q 400 600 0 100" stroke="purple"
-                                stroke-width="2" fill="none" />
-                        </svg>
-                    </div>
-                    <a href="https://chic-pavlova-13b673.netlify.app/"
-                        class="text-white border-2 w-44 h-12 text-center pt-2 rounded-full border-white transition duration-300 hover:bg-white hover:text-black z-10">
-                        Visit
-                    </a>
+
+    <div *ngFor="let project of projects; let i = index" class="flex flex-col md:flex-row p-4 gap-6"
+        [ngClass]="{ 'md:flex-row-reverse': i % 2 !== 0 }">
+
+        <!-- Image Section -->
+        <div class="relative group md:w-1/2">
+            <img class="w-full h-full object-cover" [src]="project.Image" alt="">
+
+            <!-- Hover Overlay -->
+            <div class="overlay group absolute top-0 left-0 w-full h-full bg-black bg-opacity-0 group-hover:bg-opacity-80 flex justify-center items-center transition duration-300">
+
+                <!-- Curved Line -->
+                <div class="absolute top-0 left-0 w-full h-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <svg width="100%" height="100%">
+                    <path class="curve" d="M 0 300 Q 400 0 800 100 Q 400 600 0 100" stroke="purple" stroke-width="2" fill="none" />
+                  </svg>
                 </div>
-            </div>
-            <div class=" pl-4 w-full h-[300px] sm:h-[500px] md:w-[500px]">
-                <h1 class="text-xl font-bold w-full " style="
-                background: linear-gradient(149deg, rgb(255, 0, 225) 0%, rgb(255, 255, 255) 100%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;"> Office Portfolio Project With Angular</h1>
-                <p class="text-white text-wrap">Welcome to our official office website, where you can find all the
-                    information
-                    about our services, team, and projects. Feel free to explore and get in touch with us!</p>
-            </div>
+              
+                <!-- Visit Button -->
+                <a [href]="project.link"
+                   class="text-white border-2 w-44 h-12 flex justify-center items-center rounded-full border-white transition duration-300 hover:bg-white hover:text-black z-10">
+                  Visit
+                </a>
+              </div>
+              
+        </div>
+
+        <!-- Text Section -->
+        <div class="md:w-1/2 h-[300px] sm:h-[500px] flex flex-col justify-center">
+            <h1 class="text-xl font-bold bg-gradient-to-r from-pink-500 to-white bg-clip-text text-transparent">
+                {{project.heading}}
+            </h1>
+            <p class="text-white mt-2">{{project.desc}}</p>
         </div>
     </div>
 
-    <div class="container flex flex-col md:flex-row ">
-        <div class="web flex flex-col md:flex-row p-4 ">
-            <div class="relative  w-full h-[300px] sm:h-[500px] md:w-[500px]">
-                <h1 class="text-xl font-bold w-full" style="
-                background: linear-gradient(149deg, rgb(255, 0, 225) 0%, rgb(255, 255, 255) 100%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;"> Gaming Website With Webflow</h1>
-                <p class="text-white ">Creating a gaming website with Webflow allows you to design visually stunning and
-                    interactive experiences without needing to code. With its responsive features and customizable
-                    layouts, you can effectively showcase your games and engage your audience on any device.</p>
-            </div>
-            <div class="relative group pl-0 md:pl-4 mt-4 md:mt-0 ">
-                <img class="w-full h-full object-cover" src="assets/Images/Gaming.JPG" alt="">
-                <div
-                    class="overlay w-[98.2%] h-full ml-4 bg-black opacity-0 group-hover:opacity-80 absolute top-0 left-0 flex justify-center items-center transition-opacity duration-300">
-                    <div class="curved-line absolute top-0 left-0 w-full h-full pointer-events-none">
-                        <svg width="100%" height="100%">
-                            <path class="curve" d="M 0 300 Q 400 0 800 100 Q 400 600 0 100" stroke="purple"
-                                stroke-width="2" fill="none" />
-                        </svg>
-                    </div>
-                    <a href="https://scintillating-jalebi-957a20.netlify.app/"
-                        class="text-white border-2 w-44 h-12 text-center pt-2 rounded-full border-white transition duration-300 hover:bg-white hover:text-black z-10">
-                        Visit
-                    </a>
-                </div>
-            </div>
-        </div>
+    <!-- Section Title -->
+    <div class="text-center mt-16 px-4">
+        <h1 class="text-white text-4xl font-bold">
+            Let’s Explore Popular
+            <span class="bg-gradient-to-r from-white to-purple-700 bg-clip-text text-transparent">Skills</span>
+        </h1>
+        <p class="text-white mt-4">
+            Discover the essential skills that can enhance your professional journey and set you apart in today's
+            competitive
+            landscape. By exploring diverse experiences, you can unlock new opportunities and elevate your expertise to
+            new heights.
+        </p>
     </div>
 
-
-    <div class="container flex flex-col md:flex-row ">
-        <div class="web flex flex-col md:flex-row p-4 ">
-            <div class="relative group pl-0 md:pl-4 mt-4 md:mt-0">
-                <img class="w-full h-full object-cover" src="assets/Images/Movie.JPG" alt="">
-                <div
-                    class="overlay w-[98.2%] h-full ml-4 bg-black opacity-0 group-hover:opacity-80 absolute top-0 left-0 flex justify-center items-center transition-opacity duration-300">
-                    <div class="curved-line absolute top-0 left-0 w-full h-full pointer-events-none">
-                        <svg width="100%" height="100%">
-                            <path class="curve" d="M 0 300 Q 400 0 800 100 Q 400 600 0 100" stroke="purple"
-                                stroke-width="2" fill="none" />
-                        </svg>
-                    </div>
-                    <a href="https://spontaneous-genie-445571.netlify.app/"
-                        class="text-white border-2 w-44 h-12 text-center pt-2 rounded-full border-white transition duration-300 hover:bg-white hover:text-black z-10">
-                        Visit
-                    </a>
-                </div>
-            </div>
-            <div class=" pl-4 w-full h-[300px] sm:h-[500px] md:w-[500px]">
-                <h1 class="text-xl font-bold w-full" style="
-                background: linear-gradient(149deg, rgb(255, 0, 225) 0%, rgb(255, 255, 255) 100%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;"> Movie App With API</h1>
-                <p class="text-white ">Developing a movie app with an API enables you to access a wealth of film data,
-                    including details like ratings, reviews, and trailers in real-time. By leveraging this dynamic
-                    content, you can create a rich user experience that keeps movie enthusiasts engaged and informed
-                    about their favorite films.</p>
-            </div>
-        </div>
-    </div>
-    <h1 class="text-white text-4xl text-center font-bold">Let’s Explore Popular <span style="
-        background: linear-gradient(149deg, rgba(255,246,254,1) 0%, rgba(222,26,221,1) 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;">Skills</span></h1>
-    <p class="text-white p-8 text-center">Discover the essential skills that can enhance your professional journey and
-        set you apart in today's competitive landscape. By exploring diverse experiences, you can unlock new
-        opportunities and elevate your expertise to new heights</p>
-    <div class="skills p-4 ml-0 md:ml-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-8 gap-x-0">
+    <!-- Skills Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 p-8">
         <div *ngFor="let skill of skills"
-            class="bg-black flex flex-col justify-center border-none items-center w-full md:w-56 h-72 rounded-xl p-4 transition duration-500 hover:bg-purple-900 hover:-translate-y-4 hover:shadow-white group">
-            <img class="w-32 h-32 rounded-full"
-                [src]="skill.Image"
-                alt="">
+            class="bg-black flex flex-col items-center rounded-xl p-4 h-72 transition duration-500 hover:bg-purple-900 hover:-translate-y-4 hover:shadow-white group">
+
+            <img class="w-32 h-32 rounded-full object-cover" [src]="skill.Image" alt="">
             <p class="text-white pt-2 text-xl font-bold">{{skill.name}}</p>
             <span
-                class="text-white bg-gray-800 w-32 h-12 text-lg text-center font-bold pt-2 mt-8 rounded-xl transition duration-300 group-hover:bg-white group-hover:text-black">{{skill.Percent}}</span>
+                class="text-white bg-gray-800 w-32 h-12 text-lg text-center font-bold pt-2 mt-8 rounded-xl transition duration-300 group-hover:bg-white group-hover:text-black">
+                {{skill.Percent}}
+            </span>
         </div>
     </div>
+</div>
