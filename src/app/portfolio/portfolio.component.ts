@@ -25,7 +25,7 @@ export class PortfolioComponent {
     },
     {
       Image: 'assets/Images/graphic.png',
-      link: 'https://www.figma.com/design/NKgFR45jUtFSB8rtwtRrl7/my-review?node-id=0-1&t=84vMvCC7n0UWNreh-1',
+      link: 'https://www.figma.com/design/o6N0A0ZoGPedO3hHDijvNP/Farhan-portfolio?node-id=56-658&t=UEAcIy8TrrKUBQ2D-1',
       heading: 'Farhans Graphic Portfolio – A Creative Showcase of Graphic Design Excellence',
       desc: 'Farhans graphic portfolio is a dynamic and visually appealing collection of design work, created to inspire and showcase the power of great design. From branding and logo designs to web interfaces and marketing materials, Farhan brings ideas to life with creativity and precision. Each project reflects a deep understanding of design principles, color theory, and user experience. Explore the portfolio to discover how Farhan transforms concepts into visual masterpieces that captivate and engage audiences.',
     },
